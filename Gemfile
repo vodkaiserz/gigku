@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 gem 'rails_12factor', '~> 0.0.3', group: :production
 
+gem 'devise', '~> 4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
