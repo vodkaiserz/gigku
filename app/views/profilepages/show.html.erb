@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @profilepage.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @profilepage.description %>
+</p>
+
+<p>
+  <strong>String,:</strong>
+  <%= @profilepage.string, %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @profilepage.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_profilepage_path(@profilepage) %> |
+<%= link_to 'Back', profilepages_path %>

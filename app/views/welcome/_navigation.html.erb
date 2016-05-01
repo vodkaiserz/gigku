@@ -21,32 +21,9 @@
                         <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
                         <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                         <% else %>
-                        <li class="form-horizontal">
-                            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                              <div class="form-group form-group-sm col-xs-12">
-                                <%= f.label :email, class:'sr-only' %>
-                                <%= f.email_field :email, autofocus: true, class:'form-control', placeholder: 'Your Email address' %>
-                              </div>
-
-                              <div class="form-group form-group-sm col-xs-12">
-                                <%= f.label :password, class:'sr-only' %>
-                                <%= f.password_field :password, autocomplete: "off", class:'form-control', placeholder: 'password' %>
-                              </div>    
-                                   <% if devise_mapping.rememberable? -%>
-                                    <div class="form-group">
-                                          <div class="checkbox">
-                                            <label>
-                                              <input type="checkbox"> Remember me
-                                            </label>
-                                          </div>
-                                  <% end -%>                            
-                        </li>
-
-                        <%= f.submit "Log in", class:'btn btn-primary' %><% end %>
-                        <% end %>
-                          <div class="panel-footer">
-                        <%= render "devise/shared/links" %>
-                        </div>
+                        <li><%= link_to "Sign up", new_user_registration_path %></li>
+                        <li><%= link_to "Log in", new_user_session_path %></li>
+                    <% end %>
                     <!--<li>
                         <a href="#portfolio" onclick = $("#menu-close").click(); >Artists Categories</a>
                     </li>
