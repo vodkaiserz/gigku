@@ -16,12 +16,8 @@
 </head>
 <body class="bg-white">
 
-<div class="container"
-  <% flash.each.do |name,msg| %>
-    <%= content_tag(:div, msg, class ="alert alert-info"%>
-  <% end %>
-</div>
-<%= yield %>
+
+<div class="alert alert-info" role="alert"><%= yield %></div>
 
 </body>
 </html>
